@@ -21,3 +21,43 @@ print("Вероятность того, что все карты — трефы:
 # 1.б)
 p_b = 1 - math.comb(48, 4) / math.comb(52, 4)
 print("Вероятность того, что среди 4-х карт окажется хотя бы один туз:", round(p_b, 4))
+
+
+# 2
+# Всего возможных комбинаций: C(10, 3)
+total_combinations = math.comb(10, 3)
+
+# Только одна комбинация подходит
+successful_combinations = 1
+
+# Вероятность открыть дверь с первой попытки
+p = successful_combinations / total_combinations
+
+print("Вероятность открыть дверь с первой попытки:", round(p, 4))
+
+
+
+# 3 
+# Всего возможных комбинаций: C(15, 3)
+total_combinations = math.comb(15, 3)
+
+# Количество комбинаций, в которых все детали окрашены: C(9, 3)
+successful_combinations = math.comb(9, 3)
+
+# Вероятность извлечения трех окрашенных деталей
+p = successful_combinations / total_combinations
+
+print("Вероятность извлечения трех окрашенных деталей:", round(p, 4))
+
+
+# 4
+# Всего возможных комбинаций: C(100, 2)
+total_combinations = math.comb(100, 2)
+
+# Количество комбинаций, в которых оба билета выигрышные: C(2, 2) * C(98, 0)
+successful_combinations = math.comb(2, 2) * math.comb(98, 0)
+
+# Вероятность того, что 2 приобретенных билета окажутся выигрышными
+p = successful_combinations / total_combinations
+
+print("Вероятность того, что 2 приобретенных билета окажутся выигрышными:", round(p, 4))
